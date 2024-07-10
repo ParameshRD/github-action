@@ -1,21 +1,39 @@
-name: Hello World
+name: CICD
 
 on: 
   push:
     branches: [ main ]
 
 jobs:
-  say-hello:
+  BUILD:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Run Hello World script
-      run: echo "Hello, World!"
+    - name: BUILD the application
+      run: echo "APPLICATION IS BUILDING!"
+  
+  TEST:
+    runs-on: ubuntu-latest
 
-    - name: Run HEY HELLO SCRITO
-      run: echo "hey hello!"
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: TEST the application
+      run: echo "APPLICATION IS TESTING!"
+
+  DEPLOY-TO-STAGE:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: STAGING Deployment
+      run: echo "staging deployment!!"
+  
 
 
