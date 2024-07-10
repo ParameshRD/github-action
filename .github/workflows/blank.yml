@@ -16,6 +16,7 @@ jobs:
       run: echo "APPLICATION IS BUILDING!"
   
   TEST:
+    needs: BUILD
     runs-on: ubuntu-latest
 
     steps:
@@ -26,6 +27,7 @@ jobs:
       run: echo "APPLICATION IS TESTING!"
 
   DEPLOY-TO-STAGE:
+    needs: TEST
     runs-on: ubuntu-latest
 
     steps:
