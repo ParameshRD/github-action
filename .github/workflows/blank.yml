@@ -9,8 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Run hi script
-      uses: echo "Hi!"
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
     - name: Run Hello World script
       run: echo "Hello, World!"
+
