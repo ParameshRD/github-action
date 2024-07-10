@@ -15,3 +15,7 @@ jobs:
     - name: Run Hello World script
       run: echo "Hello, World!"
 
+    - name: Run HEY HELLO SCRITO
+      run: echo "hey hello!"
+
+
