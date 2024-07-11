@@ -36,6 +36,17 @@ jobs:
 
     - name: STAGING Deployment
       run: echo "staging deployment!!"
+
+  DEPLOY-TO-PROD:
+    needs: TEST
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: PROD Deployment
+      run: echo "PROduction deployment!!"
   
 
 
