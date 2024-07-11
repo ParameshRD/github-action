@@ -33,7 +33,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: STAGING Deployment
-      run: echo "Staging deployment!!"
+      run: echo "STAGING deployment!!"
 
   DEPLOY-TO-PROD:
     needs: DEPLOY-TO-STAGE
